@@ -1,0 +1,110 @@
+.microphone-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:200px;
+    height: 200px;
+    background: rgb(255,232,232);
+    background: radial-gradient(circle, rgba(255,232,232,1) 0%, rgba(255,255,255,1) 84%);
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(30, 30, 30, 0.2), 0px 8px 16px rgba(241, 219, 197, 0.1);
+    border:1px solid ;
+    
+}
+.record-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    padding: 40px;
+}
+
+.control-button {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #FF7C30;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.record-button {
+    width: 200px;
+    height: 200px;
+    background: white;
+    border-radius: 50%;
+    border: 2px solid #fbdcd1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.record-button .mic-icon {
+    width: 60px;
+    height: 60px;
+    color: #a2a2a2;
+    transition: all 0.3s ease;
+}
+
+.record-button::before {
+    content: '';
+    position: absolute;
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 2px solid #ff712f;
+    opacity: 0;
+    animation: pulse 2s infinite;
+}
+
+.record-button.recording::before {
+    opacity: 1;
+}
+
+.record-button.recording .mic-icon {
+    color: #FF7C30;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(1.1);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+}
+
+.timer {
+    text-align: center;
+    color: #666;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.control-labels {
+    display: flex;
+    justify-content: center;
+    gap: 155px;
+    margin-top: 10px;
+    color: #666;
+}
+  
